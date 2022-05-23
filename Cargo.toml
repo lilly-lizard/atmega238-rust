@@ -1,0 +1,15 @@
+# https://snowgoons.ro/posts/2020-11-11-compiling-rust-for-arduino-nano-every-part-one/
+
+[package]
+name = "arduino-nano-rust"
+version = "0.1.0"
+edition = "2021"
+
+[build]
+target = "./targets/atmega328p.json"
+
+[unstable]
+build-std = ["core"]
+
+[dependencies]
+ruduino = { path = "ruduino" }
